@@ -32,3 +32,10 @@ CREATE TABLE order_items (
     product_id INT REFERENCES products(product_id),
     quantity INT
 );
+
+CREATE TABLE inventory (
+    inventory_id SERIAL PRIMARY KEY,
+    product_id INT REFERENCES products(product_id),
+    quantity INT,
+    location TEXT
+);
